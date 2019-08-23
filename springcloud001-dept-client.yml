@@ -1,16 +1,15 @@
-﻿spring: 
+﻿spring:
   profiles:
-  active:
-    - dev
-
---- 
+    active:
+      - dev
+---
 
 server:
   port: 8001
-spring: 
+spring:
   profiles: dev
-  application: 
-    name: sringcloud001-dept-client
+  application:
+    name: springcloud001-dept-client
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: org.gjt.mm.mysql.Driver
@@ -21,21 +20,21 @@ spring:
       min-idle: 5
       initial-size: 5
       max-total: 5
-      max-wait-millis: 200 
+      max-wait-millis: 200
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml
   type-aliases-package: com.xsj.springcloud.entities
   mapper-locations:
-  - classpath:mybatis/mapper/**/*.xml
-eureka: 
-  client: #客户端注册进eureka服务列表内
-  service-url: 
-    defaultZone: http://eureka7001.com:7001/eureka
+    - classpath:mybatis/mapper/**/*.xml
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
   instance:
     instance-id: dept-8001.com
     prefer-ip-address: true
-info: 
-  app.name: xsj-microservicecloud-springcloudconfig01
+info:
+  app.name: xsj-microeservicecloud-springcloudconfig01
   company.name: www.xsj.com
   build.artifactId: ${project.artifactId}$
   build.version: ${project.version}$
@@ -44,10 +43,10 @@ info:
 
 server:
   port: 8001
-spring: 
+spring:
   profiles: test
-  application: 
-    name: springcloud001-dept-client  
+  application:
+    name: spirngcloud001-dept-client
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: org.gjt.mm.mysql.Driver
@@ -58,21 +57,21 @@ spring:
       min-idle: 5
       initial-size: 5
       max-total: 5
-      max-wait-millis: 200  
+      max-wait-millis: 200
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml
   type-aliases-package: com.xsj.springcloud.entities
   mapper-locations:
     - classpath:mybatis/mapper/**/*.xml
-eureka: 
-  client: #客户端注册进eureka服务列表内
-  service-url: 
-    defaultZone: http://eureka7001.com:7001/eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
   instance:
     instance-id: dept-8001.com
     prefer-ip-address: true
 info:
-  app.name: xsj-microservicecloud-springcloudconfig02
+  app.name: xsj-microeservicecloud-springcloudconfig02
   company.name: www.xsj.com
   build.artifactId: ${project.artifactId}$
   build.version: ${project.version}$
