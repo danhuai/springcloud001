@@ -8,7 +8,7 @@ server:
 spring: 
   profiles: dev
   application:
-    name: springcloud001-config-eureka-client
+    name: springcloud001-eureka-client
 eureka: 
   instance: 
     hostname: eureka7001.com #冒号后面必须要有空格
@@ -23,7 +23,7 @@ server:
 spring: 
   profiles: test
   application:
-    name: springcloud001-config-eureka-client
+    name: springcloud001-eureka-client
 eureka: 
   instance: 
     hostname: eureka7001.com #冒号后面必须要有空格
